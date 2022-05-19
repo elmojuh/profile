@@ -1,2 +1,7 @@
-# profile
-Informações pessoais e profissionais
+# Profile
+
+### Informações pessoais e profissionais
+
+------------------
+
+

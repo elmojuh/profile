@@ -16,7 +16,7 @@ export default function Footer() {
           marginLeft: "auto",
           marginRight:"auto",
           paddingVertical:{
-            xs: theme.space.x12,
+            xs: theme.space.x4,
           },
           paddingHorizontal:{
             xs: theme.space.x4,
@@ -33,7 +33,7 @@ export default function Footer() {
             color: theme.colors.neutral[400],
           }}
         >
-          &copy; {new Date().getFullYear()} Todos os direitos reservados.
+          &copy; {new Date().getFullYear()} All Rights Reserved.
         </Text>
       </Box>
     </Box>

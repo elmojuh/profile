@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 export default function CiBlockchainTransparency() {
   return (
     <>
-      <Box sx={{ width: 900 }} style={{ padding: "40px" }}>
+      <Box style={{ padding: "40px" }}>
         <h2>Prefácio</h2>
         <br></br>
         <br></br>

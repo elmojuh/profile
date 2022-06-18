@@ -38,6 +38,7 @@ export default function GlobalStyle() {
         /* NextJS */
         /* ================== */
         html {
+          
         }
         body,
         #__next {

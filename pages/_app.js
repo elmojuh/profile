@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }) {
       <Menu />
       <GlobalStyle />
       <Component {...pageProps} />
-      <Footer/>
+      <Footer />
     </>
   );
 }

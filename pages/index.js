@@ -1,18 +1,10 @@
 import ProjectAcademy from "../src/components/DataFront/academic";
 import Grid from "@mui/material/Grid";
 import Skills from "../src/components/DataFront/Skills";
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
 import SobreMim from "../src/components/DataFront/sobreMim";
 import Experience from "../src/components/DataFront/experience";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
+
 
 export default function Home() {
   return (
@@ -33,18 +25,18 @@ export default function Home() {
         </Grid>
         <br></br>
         <Grid key="skillsTable" item xs={12} md={3} sm={3}>
-          <Skills/>
+          <Skills />
         </Grid>
         <Grid key="tables" item xs={12} md={8} sm={8}>
           <br></br>
           <br></br>
           <Grid key="academic" item xs={12} md={12} sm={12}>
-            <Experience/>
+            <Experience />
           </Grid>
           <br></br>
           <br></br>
           <Grid key="experience" item xs={12} md={12} sm={12}>
-            <ProjectAcademy/>
+            <ProjectAcademy />
           </Grid>
         </Grid>
       </Grid>

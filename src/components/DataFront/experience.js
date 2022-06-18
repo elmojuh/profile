@@ -65,8 +65,8 @@ export default function Experience() {
         </AccordionDetails>
       </Accordion>
       <Accordion
-        expanded={expanded === "panel2"}
-        onChange={handleChange("panel2")}
+        expanded={expanded === "panel3"}
+        onChange={handleChange("panel3")}
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

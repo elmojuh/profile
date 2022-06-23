@@ -12,11 +12,12 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
+import LaptopChromebookIcon from "@mui/icons-material/LaptopChromebook";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 //DADOS DE ROTAS INTERNAS
 const rotesPages = [
@@ -47,12 +48,20 @@ const rotesExternePages = [
     icon: LinkedInIcon,
   },
   {
+    id: "githyb",
+    link: "https://github.com/elmojuh",
+    name: "GitHub",
+    icon: GitHubIcon,
+  },
+  {
     id: "twitter",
     link: "https://twitter.com/ElmoJuh",
     name: "Twitter",
     icon: TwitterIcon,
   },
 ];
+
+
 
 export default function BarraDeMenu() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -77,7 +86,9 @@ export default function BarraDeMenu() {
     <AppBar position="static" style={{ background: "#02556F" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <LaptopChromebookIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <LaptopChromebookIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          />
           <Link href="/" passHref>
             <Typography
               variant="h6"
@@ -136,7 +147,9 @@ export default function BarraDeMenu() {
               ))}
             </Menu>
           </Box>
-          <LaptopChromebookIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <LaptopChromebookIcon
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+          />
           <Link href="/" passHref>
             <Typography
               variant="h5"

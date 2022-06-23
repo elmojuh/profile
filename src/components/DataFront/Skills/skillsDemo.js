@@ -29,7 +29,7 @@ const Star = styled(Rating)({
 });
 
 export default function SkillsDemo() {
-  const [value, setValue] = React.useState(5);
+  const [value, setValue] = React.useState(3.5);
   const [hover, setHover] = React.useState(-1);
   return (
     <Box

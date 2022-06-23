@@ -1,4 +1,3 @@
-
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -9,7 +8,7 @@ import MySkills from "./mySkills";
 import EnglishSkills from "./englishSkills";
 import SkillsDemo from "./skillsDemo";
 import SoftSkill from "./softSkills";
-
+import DevSkills from "./devSkills";
 
 export default function Skills() {
   return (
@@ -26,7 +25,7 @@ export default function Skills() {
               <h3>My Skills</h3>
             </AccordionSummary>
             <AccordionDetails key="mySkillsDetals">
-              <MySkills/>
+              <MySkills />
             </AccordionDetails>
           </Accordion>
         </Grid>
@@ -40,7 +39,7 @@ export default function Skills() {
               <h3>Soft Skills</h3>
             </AccordionSummary>
             <AccordionDetails>
-              <SoftSkill/>
+              <SoftSkill />
             </AccordionDetails>
           </Accordion>
         </Grid>
@@ -54,7 +53,21 @@ export default function Skills() {
               <h3>English Skills</h3>
             </AccordionSummary>
             <AccordionDetails>
-              <EnglishSkills/>
+              <EnglishSkills />
+            </AccordionDetails>
+          </Accordion>
+        </Grid>
+        <Grid key="devSkills" item xs={12} md={12} sm={12}>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <h3>Dev Skills</h3>
+            </AccordionSummary>
+            <AccordionDetails>
+              <DevSkills />
             </AccordionDetails>
           </Accordion>
         </Grid>
@@ -65,10 +78,10 @@ export default function Skills() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <h3>Skills</h3>
+              <h3>Skills Playing</h3>
             </AccordionSummary>
             <AccordionDetails>
-              <SkillsDemo/>
+              <SkillsDemo />
             </AccordionDetails>
           </Accordion>
         </Grid>

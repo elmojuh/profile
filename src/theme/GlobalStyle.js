@@ -1,4 +1,4 @@
-import { theme } from './theme';
+import { ThemeProvider } from '@mui/material';
 
 export default function GlobalStyle() {
     return (
@@ -14,7 +14,7 @@ export default function GlobalStyle() {
           color: black;
         }
         body {
-          font-family: ${theme.typography.fontFamily}, sans-serif;
+          font-family: sans-serif;
         }
         img, video {
           max-width: 100%;

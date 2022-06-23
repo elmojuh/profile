@@ -3,6 +3,7 @@ import Menu from "../src/components/patterns/Menu";
 import Footer from "../src/components/patterns/Footer";
 import Head from "next/head";
 
+
 export default function MyApp({ Component, pageProps }) {
   return (
     <>

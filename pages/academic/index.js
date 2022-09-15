@@ -3,7 +3,6 @@ import { Grid } from "@mui/material";
 import Button from "@mui/material/Button";
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import ButtonColor from "../../src/components/ButtonColor";
 
 const ColorButton = styled(Button)(() => ({
   textDecoration: "none",

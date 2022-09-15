@@ -5,6 +5,7 @@ import ButtonColor from "../../src/components/ButtonColor";
 export default function Blog() {
   return (
     <>
+    <div></div>
     </>
   );
 }

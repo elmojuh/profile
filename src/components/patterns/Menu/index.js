@@ -22,8 +22,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 //DADOS DE ROTAS INTERNAS
 const rotesPages = [
   { id: "academic", link: "/academic", name: "Academic" },
-  { id: "blog", link: "/blog", name: "Blog" },
-  { id: "jobs", link: "/#jobs", name: "Jobs" },
 ];
 
 //DADOS DE LINKS EXTERNOS

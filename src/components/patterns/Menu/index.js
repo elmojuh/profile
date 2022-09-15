@@ -21,10 +21,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 //DADOS DE ROTAS INTERNAS
 const rotesPages = [
-  { id: "academic", link: "/academic", name: "Academic" },
-  { id: "blog", link: "/blog", name: "Blog" },
-  { id: "games", link: "/#games", name: "Games" },
-  { id: "jobs", link: "/#jobs", name: "Jobs" },
+  { id: "academic", link: "/academic", name: "Academic" },  
 ];
 
 //DADOS DE LINKS EXTERNOS
@@ -83,7 +80,7 @@ export default function BarraDeMenu() {
   };
 
   return (
-    <AppBar position="static" style={{ background: "#02556F" }}>
+    <AppBar position="static" style={{ background: "#0F0F0F" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LaptopChromebookIcon
@@ -188,7 +185,7 @@ export default function BarraDeMenu() {
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
                   alt="Elmo Júnior"
-                  src="https://media-exp2.licdn.com/dms/image/C4E03AQFsHRKH57xokw/profile-displayphoto-shrink_800_800/0/1604188288692?e=1660176000&v=beta&t=XF9NHZE7J9u-2sChbWIZvuF2eVaK1D16_RnEwx3H1U8"
+                  src="https://media-exp1.licdn.com/dms/image/C4E03AQFsHRKH57xokw/profile-displayphoto-shrink_800_800/0/1604188288692?e=1668643200&v=beta&t=oLn2E-yjP85YibCE1Q-RnJ9AYzlxZ8KmX8zdVT9-b34"
                 />
               </IconButton>
             </Tooltip>

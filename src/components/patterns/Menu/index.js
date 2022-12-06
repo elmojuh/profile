@@ -25,11 +25,13 @@ const rotesPages = [
 ];
 
 //DADOS DE LINKS EXTERNOS
+const elmosImage = "https://br.gravatar.com/userimage/83388631/48137d8601d6b0c8ab99eeaa108c9fee.png?size=200";
+
 const rotesExternePages = [
   {
     id: "facebook",
     link: "https://www.fb.com/elmo.juh",
-    name: "FaceBook",
+    name: "Facebook",
     icon: FacebookIcon,
   },
   {
@@ -181,11 +183,11 @@ export default function BarraDeMenu() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Social Midia of Elmo Júnior">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            <Tooltip title="Click to see social midia of Elmo Júnior">
+              <IconButton onClick={handleOpenUserMenu} aria-label="Example" sx={{ p: 0 }}>
                 <Avatar
                   alt="Elmo Júnior"
-                  src="https://media-exp1.licdn.com/dms/image/C4E03AQFsHRKH57xokw/profile-displayphoto-shrink_800_800/0/1604188288692?e=1668643200&v=beta&t=oLn2E-yjP85YibCE1Q-RnJ9AYzlxZ8KmX8zdVT9-b34"
+                  src={elmosImage}
                 />
               </IconButton>
             </Tooltip>

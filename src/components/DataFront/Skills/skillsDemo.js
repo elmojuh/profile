@@ -37,7 +37,7 @@ export default function SkillsDemo() {
         "& > legend": { mt: 2 },
       }}
     >
-      <Typography component="legend">This one is for playing!</Typography>
+      <Typography component="legend">Free Click!</Typography>
       <Star
         key="star"
         name="star"

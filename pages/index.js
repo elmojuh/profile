@@ -53,8 +53,10 @@ function Style({ children, as, fontColor }) {
       <style jsx>
         {`
           ${Tag} {
+            padding-left: 0;
             font-family: sans-serif;
             color: ${fontColor};
+            
           }
         `}
       </style>

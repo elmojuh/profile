@@ -38,7 +38,8 @@ export default function GlobalStyle() {
         /* NextJS */
         /* ================== */
         html {
-          
+          position: relative;
+          min-height: 100%;
         }
         body,
         #__next {

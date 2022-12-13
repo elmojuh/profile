@@ -25,9 +25,9 @@ export default function Experience() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography sx={{ width: "33%", flexShrink: 0 }}>OWSE</Typography>
-          <Typography sx={{ color: "text.secondary" }}>
-            Requirement Analyst
+          <Typography sx={{ color: "text.primary", width: "33%", flexShrink: 0 }}><h4>OWSE</h4></Typography>
+          <Typography sx={{ color: "text.primary" }}>
+          <h4>Requirement Analyst</h4>
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -48,11 +48,11 @@ export default function Experience() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography sx={{ width: "33%", flexShrink: 0 }}>
-            Health Mobile
+          <Typography sx={{color: "text.primary",  width: "33%", flexShrink: 0 }}>
+            <h4>Health Mobile</h4>
           </Typography>
-          <Typography sx={{ color: "text.secondary" }}>
-            Systems Analyst
+          <Typography sx={{ color: "text.primary" }}>
+            <h4>Systems Analyst</h4>
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -73,9 +73,9 @@ export default function Experience() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography sx={{ width: "33%", flexShrink: 0 }}>EJCM</Typography>
-          <Typography sx={{ color: "text.secondary" }}>
-            Systems Analyst - Full Stack Developer - Marketing Advisor
+          <Typography sx={{ color: "text.primary", width: "33%", flexShrink: 0 }}><h4>EJCM</h4></Typography>
+          <Typography sx={{ color: "text.primary" }}>
+            <h4>Systems Analyst - Full Stack Developer - Marketing Advisor</h4>
           </Typography>
         </AccordionSummary>
         <AccordionDetails>

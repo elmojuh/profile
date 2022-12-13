@@ -26,10 +26,10 @@ export default function ProjectAcademy() {
           id="panel1bh-header"
         >
           <Typography sx={{ width: "33%", flexShrink: 0 }}>
-            Cientific Initiation
+            <h4>Cientific Initiation</h4>
           </Typography>
-          <Typography sx={{ color: "text.secondary" }}>
-            BNDESToken Blockchain Transparency Assessment
+          <Typography sx={{ color: "text.primary" }}>
+          <h4>BNDESToken Blockchain Transparency Assessment</h4>
           </Typography>
         </AccordionSummary>
         <AccordionDetails>

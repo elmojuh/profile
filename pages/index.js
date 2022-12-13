@@ -8,7 +8,8 @@ import Experience from "../src/components/DataFront/experience";
 
 export default function Home() {
   return (
-    <div>
+
+    <div><StyleGlobal>
       <br></br>
       <Style as="h1" fontColor="#02556F">
         Elmo Sanches G. Júnior
@@ -41,6 +42,7 @@ export default function Home() {
         </Grid>
       </Grid>
       <br></br>
+    </StyleGlobal>
     </div>
   );
 }
@@ -53,10 +55,24 @@ function Style({ children, as, fontColor }) {
       <style jsx>
         {`
           ${Tag} {
-            padding-left: 0;
+            padding-left: 0px;
             font-family: sans-serif;
             color: ${fontColor};
-            
+          }
+        `}
+      </style>
+    </div>
+  );
+}
+
+function StyleGlobal({ children }) {
+  return (
+    <div>
+      { children }
+      <style jsx>{`
+        div{
+            padding-left: 7px;
+            padding-right: 7px;
           }
         `}
       </style>

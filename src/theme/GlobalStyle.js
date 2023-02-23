@@ -1,5 +1,3 @@
-import { ThemeProvider } from '@mui/material';
-
 export default function GlobalStyle() {
     return (
         <style global jsx>{`

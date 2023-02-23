@@ -5,18 +5,22 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 
 const ColorButton = styled(Button)(() => ({
-  textDecoration: "none",
+  textDecoration: "none !important",
   color: "#FFFFFF",
-  backgroundColor: "#02556F",
+  backgroundColor: "#000000",
   "&:hover": {
     backgroundColor: "#02556F",
+    textDecoration: "none",
   },
 }));
 
 export default function Academic() {
+  const paddingGlobal = {
+    paddingLeft: "7px",
+    paddingRight: "7px"
+  }
   return (
-    <>
-      <StyleGlobal>
+    <div style={paddingGlobal}>
         <Grid key="aboutMe" item xs={12} md={6} sm={6}>
           <h2>Cientific Initiation</h2>
           <h3>BNDESToken Blockchain Transparency Assessment</h3>
@@ -28,24 +32,6 @@ export default function Academic() {
             <ColorButton color="primary">Link</ColorButton>
           </Link>
         </Grid>
-      </StyleGlobal>
-    </>
+    </div>
   );
-
-  function StyleGlobal({ children }) {
-    return (
-      <div>
-        {children}
-        <style jsx>{`
-          div{
-              padding-left: 7px;
-              padding-right: 7px;
-            }
-          `}
-        </style>
-      </div>
-    );
-  }
-
-
 }

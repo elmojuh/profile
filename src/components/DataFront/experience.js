@@ -4,7 +4,6 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Link from "../Link";
 
 export default function Experience() {
   const [expanded, setExpanded] = React.useState(false);
@@ -13,6 +12,8 @@ export default function Experience() {
     setExpanded(isExpanded ? panel : false);
   };
 
+
+  
   return (
     <div>
       <h2 id="#jobs">Experience</h2>
@@ -25,9 +26,9 @@ export default function Experience() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography sx={{ color: "text.primary", width: "33%", flexShrink: 0 }}><h4>OWSE</h4></Typography>
+          <Typography sx={{ color: "text.primary", width: "33%", flexShrink: 0 }}>OWSE</Typography>
           <Typography sx={{ color: "text.primary" }}>
-          <h4>Requirement Analyst</h4>
+          Requirement Analyst
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -49,10 +50,10 @@ export default function Experience() {
           id="panel1bh-header"
         >
           <Typography sx={{color: "text.primary",  width: "33%", flexShrink: 0 }}>
-            <h4>Health Mobile</h4>
+            Health Mobile
           </Typography>
           <Typography sx={{ color: "text.primary" }}>
-            <h4>Systems Analyst</h4>
+            Systems Analyst
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -73,13 +74,16 @@ export default function Experience() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography sx={{ color: "text.primary", width: "33%", flexShrink: 0 }}><h4>EJCM</h4></Typography>
-          <Typography sx={{ color: "text.primary" }}>
-            <h4>Systems Analyst - Full Stack Developer - Marketing Advisor</h4>
+          <Typography sx={{color: "text.primary",  width: "33%", flexShrink: 2 }}>
+            EJCM
           </Typography>
+          <Typography sx={{ color: "text.primary" }}>
+            Systems Analyst - Full Stack Developer - Marketing Advisor
+          </Typography>
+            
+
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
             I performed external and internal marketing functions. I developed
             myself in image and video editing tools, such as photoshop,
             illustrator, premiere and others. In addition to advising the
@@ -90,7 +94,6 @@ export default function Experience() {
             such as: PHP, Laravel, HTML, CSS, Git, and the use of Agile
             Technologies. It was a great experience where I was able to manage,
             program and interact with team partners.
-          </Typography>
         </AccordionDetails>
       </Accordion>
     </div>

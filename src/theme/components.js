@@ -2,6 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as iconSet from "@fortawesome/free-solid-svg-icons";
 
+// Aqui acrupo grande parte dos comonentes usáveis construidos ou vindos de outras bibliotecas
+
+
 import { theme } from './theme';
 
 function capitalize(str) {

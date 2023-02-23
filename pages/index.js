@@ -3,17 +3,36 @@ import Grid from "@mui/material/Grid";
 import Skills from "../src/components/DataFront/Skills";
 import SobreMim from "../src/components/DataFront/sobreMim";
 import Experience from "../src/components/DataFront/experience";
+import MyErrorBoundary from "../src/components/MyErrorBoundary";
 
-
+// index.js - aqui está a página inicial e a aglomiração de funções componentizadas
 
 export default function Home() {
+  const fontCollor = "#02556F";
+
+  const style = {
+    paddingLeft: '0px',
+    fontFamily: 'sans-serif',
+    color: {fontCollor}
+  }
+
+  const padding = {
+    paddingLeft: '20px',
+    paddingRight: '10px'
+  }
+
+  const myName = {
+    name: 'Elmo Sanches G. Júnior'
+  }
+
   return (
 
-    <div><StyleGlobal>
+    <div style={padding}>
       <br></br>
-      <Style as="h1" fontColor="#02556F">
-        Elmo Sanches G. Júnior
-      </Style>
+      <MyErrorBoundary>
+      <h1 style={style}>
+        {myName.name}
+      </h1>
       <br></br>
       <Grid key="body" container spacing={0}>
         <Grid key="information" item xs={12} md={7} sm={7}>
@@ -42,46 +61,7 @@ export default function Home() {
         </Grid>
       </Grid>
       <br></br>
-    </StyleGlobal>
+      </MyErrorBoundary>
     </div>
   );
-}
-
-function Style({ children, as, fontColor }) {
-  const Tag = as;
-  return (
-    <div>
-      <Tag>{children}</Tag>
-      <style jsx>
-        {`
-          ${Tag} {
-            padding-left: 0px;
-            font-family: sans-serif;
-            color: ${fontColor};
-          }
-        `}
-      </style>
-    </div>
-  );
-}
-
-function StyleGlobal({ children }) {
-  return (
-    <div>
-      { children }
-      <style jsx>{`
-        div{
-            padding-left: 7px;
-            padding-right: 7px;
-          }
-        `}
-      </style>
-    </div>
-  );
-}
-
-function CapsLock(props) {
-  const textoInserido = props.children;
-  const textoEmCapsLock = textoInserido.toUpperCase();
-  return <div>{textoEmCapsLock}</div>;
 }

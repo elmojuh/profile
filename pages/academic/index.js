@@ -5,7 +5,7 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 
 const ColorButton = styled(Button)(() => ({
-  textDecoration: "none !important",
+  textDecoration: "none",
   color: "#FFFFFF",
   backgroundColor: "#000000",
   "&:hover": {

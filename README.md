@@ -1,12 +1,12 @@
-# Meu vida pessoal e profissional
+# Minha vida pessoal e profissional
 -----
 ## Indrodução:
 
-Um espaço para eu organizar um currículo profissional com acessos a minha vida nas redes soais. Não procure muito.
+Um espaço para eu organizar um currículo profissional com acessos a minha vida profissional e redes sociais. Não procure muito!
 
 ## Tecnologias usadas neste projeto.
 
-Além de todo desenvolvido com ReactJs JS, e MaterialMUI para o estilo flat.
+Desenvolvido com ReactJs e JS, e Material MUI e UI para o estilo flat.
 
 ### Java Script, ReactJs, Next com servidor na Vercel
 Todos usados para facilitar codificação, experiência com o desenvolvedor e usuário, vácil de colocar on-line. 
@@ -21,7 +21,8 @@ JavaScript é a linguagem que torna isso tudo possível. Com programação de al
 ### Material-UI e Material-MUI
 
 O meu profile usa duas bibliotecas que facilitam o uso de estilização. São bem úteis e fácies de serem manipuldas no código.
-### 
+
+### Dependência
 
 
     "dependencies": {
@@ -39,3 +40,11 @@ O meu profile usa duas bibliotecas que facilitam o uso de estilização. São be
         "react-dom": "^18.1.0",
         "styled-components": "^5.3.5"
     }
+
+
+### Clonagem de Projeto
+
+Você pode clonar meu projeto de modo padrão:
+
+    git clone https://github.com/elmojuh/profile.git
+

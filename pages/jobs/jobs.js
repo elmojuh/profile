@@ -3,55 +3,63 @@
 
 import { useState } from "react"
 
-const projects = [
-  {
-    id: 'artacril',
-    link: 'https://artacril.vercel.app/',
-    value: 'Art Acril',
-    image: '/images/artacril.png'
-  }
-]
-
-const style = {
-  width: '400px',
-}
-
-const img1 = {
-  display: 'block',
-  width: '100%',
-  height: 'auto',
-  transition: 'transform 0.3 ease-in-out',
-}
-
-const title = {
-  position: 'absolute',
-  bottom: '0',
-  left: '0',
-  backgroundColor: 'rgba(0, 0, 0, 0.8)',
-  color: 'white',
-  width: '100%',
-  padding: '10px',
-  margin: '0',
-}
 
 export default function Jobs() {
 
+  const data = [
+    {
+      id: 'artacril',
+      link: 'https://artacril.vercel.app/',
+      value: 'Art Acril',
+      image: '/images/artacril.png'
+    },
+  ]
+
   const [hovered, setHovered] = useState(false);
-  const handleHover = () => {
-    setHovered(!hovered);
+
+  const handleMouseOver = () => {
+    setHovered(true);
+  };
+  const handleMouseOut = () => {
+    setHovered(false);
   };
 
+  const style = {
+    width: '400px',
+    position: 'relative',
+  }
+
+  const imgStyle = {
+    opacity: hovered ? 0.5 : 1, // Define a opacidade da imagem
+    transition: 'opacity 0.5s ease', // Define a transição da opacidade
+  }
+
+  const title = {
+    position: 'absolute',
+    bottom: '0',
+    left: '0',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    color: 'white',
+    width: '100%',
+    padding: '10px',
+    margin: '0',
+  }
+
+  const containerStyle = {
+    position: 'relative',
+    width: '400px',
+  }
+
   return (
-    <div style={style} className='container'>
-      {projects.map(({ id, link, value, image }) => (
-        <div key={id}>
+    <div style={style}>
+      {data.map(({ id, link, value, image }) => (
+        <div key={id} style={containerStyle} onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}>
           <a href={link} target="_blank">
-            <img style={img1}
+            <img style={imgStyle}
               src={image}
               alt='project'
-              className={hovered ? 'hovered-image' : ''}
-              onMouseEnter={handleHover}
-              onMouseLeave={handleHover} />
+            />
             <div style={title}>{value}</div>
           </a>
         </div>

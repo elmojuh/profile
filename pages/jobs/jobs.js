@@ -3,37 +3,30 @@
 
 import { useState } from "react"
 
+const data = [
+  {
+    id: 'artacril',
+    link: 'https://artacril.vercel.app/',
+    value: 'Art Acril',
+    image: '/images/artacril.png'
+  },
+]
 
 export default function Jobs() {
 
-  const data = [
-    {
-      id: 'artacril',
-      link: 'https://artacril.vercel.app/',
-      value: 'Art Acril',
-      image: '/images/artacril.png'
-    },
-  ]
-
-  const [hovered, setHovered] = useState(false);
-
-  const handleMouseOver = () => {
-    setHovered(true);
-  };
-  const handleMouseOut = () => {
-    setHovered(false);
-  };
-
+  
   const style = {
     width: '400px',
     position: 'relative',
   }
-
-  const imgStyle = {
-    opacity: hovered ? 0.5 : 1, // Define a opacidade da imagem
-    transition: 'opacity 0.5s ease', // Define a transição da opacidade
+  
+  const containerStyle = {
+    position: 'relative',
+    width: '400px',
   }
+  
 
+  
   const title = {
     position: 'absolute',
     bottom: '0',
@@ -45,9 +38,19 @@ export default function Jobs() {
     margin: '0',
   }
 
-  const containerStyle = {
-    position: 'relative',
-    width: '400px',
+  
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseOver = () => {
+    setHovered(true);
+  };
+  const handleMouseOut = () => {
+    setHovered(false);
+  };
+
+  const imgStyle = {
+    opacity: hovered ? 0.5 : 1, // Define a opacidade da imagem
+    transition: 'opacity 0.5s ease', // Define a transição da opacidade
   }
 
   return (

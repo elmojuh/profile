@@ -1,7 +1,7 @@
+import * as React from "react";
 import Link from "../../src/components/Link";
 import { Grid } from "@mui/material";
 import Button from "@mui/material/Button";
-import * as React from "react";
 import { styled } from "@mui/material/styles";
 
 const ColorButton = styled(Button)(() => ({

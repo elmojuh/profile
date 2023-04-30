@@ -10,6 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
+import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import LaptopChromebookIcon from "@mui/icons-material/LaptopChromebook";
@@ -62,7 +63,21 @@ const rotesExternePages = [
   },
 ];
 
+const ColorButton = styled(Button)(() => ({
+  textDecoration: "none",
+  color: "#000000",
+  backgroundColor: "#FFFFFF",
+  borderColor: "black",
+  width: "460px",
+  maxWidth: "260px",
 
+  "&:hover": {
+    backgroundColor: "#000000",
+    textDecoration: "none",
+    color: "#FFFFFF",
+    borderColor: "black",
+  },
+}));
 
 export default function BarraDeMenu() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -211,9 +226,11 @@ export default function BarraDeMenu() {
             >
               {rotesExternePages.map(({ id, name, link, icon: Icon }) => (
                 <a key={id} target="_blank" href={link}>
-                  <MenuItem key={id} onClick={handleCloseUserMenu}>
-                    <Icon />
-                    <Typography textAlign="center">{name}</Typography>
+                  <MenuItem>
+                    <ColorButton key={id}>
+                      <Icon />
+                      <Typography textAlign="center">{name}</Typography>
+                    </ColorButton>
                   </MenuItem>
                 </a>
               ))}

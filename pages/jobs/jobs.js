@@ -6,28 +6,29 @@ import { useState } from "react"
 const data = [
   {
     id: 'artacril',
-    link: 'https://artacril.vercel.app/',
+    link: 'https://artacril.com',
     value: 'Art Acril',
-    image: '/images/artacril.png'
+    image: '/images/artacril.png',
+    project: 'Art Acril Project'
   },
 ]
 
 export default function Jobs() {
 
-  
+
   const style = {
     width: '400px',
     position: 'relative',
   }
-  
+
   const containerStyle = {
     position: 'relative',
     width: '400px',
   }
-  
 
-  
-  const title = {
+
+
+  const titleStyle = {
     position: 'absolute',
     bottom: '0',
     left: '0',
@@ -38,7 +39,7 @@ export default function Jobs() {
     margin: '0',
   }
 
-  
+
   const [hovered, setHovered] = useState(false);
 
   const handleMouseOver = () => {
@@ -55,15 +56,12 @@ export default function Jobs() {
 
   return (
     <div style={style}>
-      {data.map(({ id, link, value, image }) => (
+      {data.map(({ id, link, value, image, project }) => (
         <div key={id} style={containerStyle} onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}>
           <a href={link} target="_blank">
-            <img style={imgStyle}
-              src={image}
-              alt='project'
-            />
-            <div style={title}>{value}</div>
+            <img style={imgStyle} src={image} alt={project} />
+            <div style={titleStyle}>{value}</div>
           </a>
         </div>
       ))}

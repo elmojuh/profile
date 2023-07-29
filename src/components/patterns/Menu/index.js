@@ -28,7 +28,7 @@ const rotesPages = [
 ];
 
 //DADOS DE LINKS EXTERNOS
-const elmosImage = "https://br.gravatar.com/userimage/83388631/48137d8601d6b0c8ab99eeaa108c9fee.png?size=200";
+const elmosImage = "images/logoPreta.jpg";
 
 const rotesExternePages = [
   {

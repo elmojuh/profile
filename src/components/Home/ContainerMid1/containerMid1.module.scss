@@ -1,0 +1,128 @@
+.containerMid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #e3e3e3;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url('/images/imagem-codigo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contentContainer {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(-50%); /* Começa fora da tela à esquerda */
+    transition: opacity 1s ease, transform 1s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateX(0); /* Animação para a posição final */
+    }
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.legendColor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    perspective: 1000px;
+    width: 100%;
+}
+
+.skillButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background: rgba(255, 255, 255, 0.9); // Transparência
+    backdrop-filter: blur(1px); // Efeito de desfoque
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.modalContent h2 {
+    margin-top: 0;
+}
+
+.modalContent a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.modalContent a .icon-info {
+    font-size: 24px;
+}

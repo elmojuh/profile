@@ -1,0 +1,123 @@
+.containerContatoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 20px;
+    //background: conic-gradient(from 0deg, #05191b, #061617, #061617, #3c301d, #3c301d, #020707, #020707, #05191b);
+    background: conic-gradient(from 0deg, #3c301d, #061617 20%, #061617 20%, #05191b, #05191b, #020707, #020707, #3c301d 95%);
+    perspective: 1000px; /* Adiciona percepção de profundidade */
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff; /* Certifique-se de que a cor do texto é visível no fundo */
+    text-align: center;
+    width: 100%; /* Garante que o título ocupe toda a largura do contêiner */
+}
+
+.containerContato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo do botão */
+    width: 200px; /* Define a largura fixa */
+    height: 50px; /* Define a altura fixa */
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #e0e0e0;
+        transform: scale(1.05);
+      color: #000;
+    }
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.contactDetails {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  max-width: 700px;
+  opacity: 0;
+  transform: rotateY(90deg); /* Inicialmente virado */
+  transition: opacity 1s ease, transform 800ms ease;
+  transform-style: preserve-3d; /* Mantém a percepção de profundidade durante a rotação */
+
+  &.visible {
+    opacity: 1;
+    transform: rotateY(0); /* Animação para a posição final */
+  }
+
+  &.flip {
+    transform: rotateX(100deg); /* Animação de flip */
+  }
+}
+
+.linkButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+}
+
+.selected {
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}

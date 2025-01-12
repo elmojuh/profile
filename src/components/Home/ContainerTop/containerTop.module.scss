@@ -1,0 +1,102 @@
+// Variáveis para facilitar a manutenção e reutilização
+$transition-duration: 1s;
+$transition-ease: ease;
+
+.containerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 500px;
+    background: linear-gradient(to right,
+            #020707, #040e0e, #061616, #081d1d, #0a2424,
+            #0c2b2b, #0e3232, #103939, #124040, #144747,
+            #164e4e, #185555, #1a5c5c, #1c6363, #1e6a6a,
+            #207171, #227878, #248080, #268787, #288e8e);
+    //background: linear-gradient(to right, #020707, #061617);
+    padding: 10px;
+    overflow: hidden;
+
+    @media (min-width: 600px) {
+        justify-content: space-between;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px;
+        width: 100%;
+        max-width: 800px;
+        box-sizing: border-box;
+
+        @media (min-width: 600px) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 100px;
+        }
+    }
+
+    .boxImage,
+    .boxText {
+        opacity: 0; // Inicialmente invisível
+        transition: opacity $transition-duration $transition-ease, transform $transition-duration $transition-ease;
+    }
+
+    .boxImage {
+        flex: 3;
+        margin: 10px;
+        filter: grayscale(100%);
+        transform: translateX(-100%); // Começa fora da tela à esquerda
+
+        &.visible {
+            opacity: 1;
+            transform: translateX(0); // Animação para a posição final
+        }
+
+        .imgProfile {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .boxText {
+        flex: 2;
+        margin: 10px;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        word-wrap: break-word;
+        white-space: normal;
+        transform: translateX(100%); // Começa fora da tela à direita
+
+        &.visible {
+            opacity: 1;
+            transform: translateX(0); // Animação para a posição final
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: white;
+            margin-left: 2px;
+            animation: blink 1s step-start infinite;
+        }
+
+        #typing-text {
+            display: inline-block;
+            white-space: normal;
+            overflow: hidden;
+        }
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+}

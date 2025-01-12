@@ -1,0 +1,106 @@
+.containerMid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: conic-gradient(from 0deg, #05191b, #061617, #061617, #3c301d, #3c301d, #020707, #020707, #05191b);
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.projectList {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; /* Limite de tamanho lateral */
+    margin-left: 25px; /* Espaço entre a lista e o conteúdo */
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(-100%); /* Começa fora da tela à esquerda */
+    transition: opacity 1s ease, transform 1s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateX(0); /* Animação para a posição final */
+    }
+
+    @media (min-width: 768px) {
+        align-items: flex-start;
+    }
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #007bff; /* Cor de fundo mais vibrante */
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px); /* Efeito de desfoque */
+
+    &:hover {
+        background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+        transform: scale(1.2);
+    }
+}
+
+.projectDetails {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparência */
+    width: 100%;
+    max-width: 700px;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(100%); /* Começa fora da tela à direita */
+    transition: opacity 1s ease, transform 1s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateX(0); /* Animação para a posição final */
+    }
+
+    @media (min-width: 768px) {
+        align-items: flex-start;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background: rgba(255, 255, 255, 0.9); /* Transparência */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    backdrop-filter: blur(5px); /* Efeito de desfoque */
+}
+
+.selected {
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}

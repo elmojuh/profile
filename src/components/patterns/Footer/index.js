@@ -15,7 +15,7 @@ const footerStyle={
 export default function Footer() {
   return (
     <div style={footerStyle}>
-      All Rights Reserved. At 2023
+      All Rights Reserved. At 2025
     </div>
   )
 }

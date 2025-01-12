@@ -1,8 +1,6 @@
 import GlobalStyle from "../src/theme/GlobalStyle";
-import Menu from "../src/components/patterns/Menu";
 import Footer from "../src/components/patterns/Footer";
 import Head from "next/head";
-import { ThemeProvider } from "styled-components";
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -10,10 +8,9 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <title>@ElmoJuh</title>
       </Head>
-      <Menu />
       <GlobalStyle />
       <Component {...pageProps} />
-      <Footer />
+        <Footer />
     </>
   );
 }

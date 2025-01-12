@@ -33,7 +33,7 @@ export default function ContainerMid1() {
                     }
                 });
             },
-            { threshold: 0.3 } // Ativa quando 30% do elemento estiver visível
+            { threshold: 0.2 } // Ativa quando 30% do elemento estiver visível
         );
 
         const contentContainer = document.querySelector(`.${styles.contentContainer}`);
@@ -46,10 +46,16 @@ export default function ContainerMid1() {
 
     const openModal = (skill) => {
         setModalContent(skill);
+        setTimeout(() => {
+            document.querySelector(`.${styles.modal}`).classList.add(styles.visible);
+        }, 10); // Pequeno atraso para garantir que a classe seja adicionada após a renderização
     };
 
     const closeModal = () => {
-        setModalContent(null);
+        document.querySelector(`.${styles.modal}`).classList.remove(styles.visible);
+        setTimeout(() => {
+            setModalContent(null);
+        }, 500); // Tempo da animação de fechamento
     };
 
     const hexToRgba = (hex, alpha) => {

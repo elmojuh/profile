@@ -100,11 +100,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0; /* Inicialmente invisível */
+    transform: scale(0.5); /* Inicialmente pequeno */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animação de crescimento */
 }
 
 .modalContent {
     background: rgba(255, 255, 255, 0.9); // Transparência
-    backdrop-filter: blur(1px); // Efeito de desfoque
     padding: 20px;
     border-radius: 10px;
     max-width: 500px;
@@ -125,4 +127,9 @@
 
 .modalContent a .icon-info {
     font-size: 24px;
+}
+
+.modal.visible {
+    opacity: 1; /* Torna visível */
+    transform: scale(1); /* Tamanho final */
 }

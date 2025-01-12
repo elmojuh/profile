@@ -2,15 +2,15 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./containerContato.module.scss";
 
 const contacts = [
-    { name: "Email", content: "https://your-email@example.com", icon: "📧", description: "Send me an email at your-email@example.com" },
-    { name: "GitHub", content: "https://github.com/your-username", icon: "🐱", description: "Check out my GitHub profile at github.com/your-username" },
-    { name: "LinkedIn", content: "https://www.linkedin.com/in/your-username", icon: "🔗", description: "Connect with me on LinkedIn at linkedin.com/in/your-username" },
-    { name: "Instagram", content: "https://www.instagram.com/your-username", icon: "📸", description: "Follow me on Instagram at instagram.com/your-username" },
-    { name: "WhatsApp", content: "https://wa.me/your-number", icon: "💬", description: "Chat with me on WhatsApp at wa.me/your-number" }
+    { name: "WhatsApp", link: "https://wa.me/your-number", icon: "💬", description: "Entre em contato comigo pelo WathsApp" },
+    { name: "GitHub", link: "https://github.com/elmojuh", icon: "🐱", description: "Veja meus projetos pelo GitHub" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/elmo-junior", icon: "🔗", description: "Me encontre na plataforma Linkedin" },
+    { name: "Email", icon: "📧", description: "Me envie email para o elmosanchesjr@gmail.com" },
+    { name: "Instagram", link: "https://www.instagram.com/elmojuh", icon: "📸", description: "Me encontre no Instagram" }
 ];
 
 export default function ContainerContato() {
-    const [selectedContact, setSelectedContact] = useState(null);
+    const [selectedContact, setSelectedContact] = useState(contacts[0]);
     const [windowWidth, setWindowWidth] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
     const [isFlipping, setIsFlipping] = useState(false);
@@ -49,6 +49,15 @@ export default function ContainerContato() {
         setIsVisible(true);
     }, []);
 
+    useEffect(() => {
+        if (contactListRef.current) {
+            const firstContactItem = contactListRef.current.children[0];
+            if (firstContactItem) {
+                firstContactItem.classList.add(styles.slideInLeft);
+            }
+        }
+    }, []);
+
     const handleContactClick = (contact) => {
         if (selectedContact !== contact) {
             setIsFlipping(true);
@@ -61,7 +70,7 @@ export default function ContainerContato() {
 
     return (
         <div className={styles.containerContatoWrapper}>
-            <div className={styles.title}>Contact Me</div>
+            <div className={styles.title}>Entre em contato comigo</div>
             <div className={styles.containerContato}>
                 <div ref={contactListRef} className={styles.contacts}>
                     {contacts.map((contact, index) => (
@@ -74,12 +83,15 @@ export default function ContainerContato() {
                     ))}
                 </div>
                 {selectedContact && (
-                    <div ref={contactDetailsRef}
-                         className={`${styles.contactDetails} ${isVisible ? styles.visible : ""} ${isFlipping ? styles.flip : ""}`}>
-                        <h2>{selectedContact.name}</h2>
-                        <p>{selectedContact.description}</p>
-                        <a href={selectedContact.content} target="_blank" rel="noopener noreferrer" className={styles.linkButton}>Link</a>
-                    </div>
+                  <div ref={contactDetailsRef}
+                       className={`${styles.contactDetails} ${isVisible ? styles.visible : ""} ${isFlipping ? styles.flip : ""}`}>
+                    <span className={styles.icon}>{selectedContact.icon}</span>
+                    <h2>{selectedContact.name}</h2>
+                    <p>{selectedContact.description}</p>
+                    {selectedContact.link && (
+                      <a href={selectedContact.link} target="_blank" rel="noopener noreferrer" className={styles.linkButton}>Link</a>
+                    )}
+                  </div>
                 )}
             </div>
         </div>

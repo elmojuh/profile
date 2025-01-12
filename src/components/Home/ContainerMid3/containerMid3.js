@@ -89,12 +89,12 @@ export default function ContainerMid3() {
                 ))}
             </div>
             {selectedProject && windowWidth >= 768 && (
-    <div ref={projectDetailsRef} className={`${styles.projectDetails} ${isVisible ? styles.visible : ""}`} style={{ marginLeft: "50px" }}>
-        <h2>{selectedProject.title}</h2>
-        <p>{selectedProject.description}</p>
-        <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">Learn more</a>
-    </div>
-)}
+                <div ref={projectDetailsRef} className={`${styles.projectDetails} ${isVisible ? styles.visible : ""}`} style={{ marginLeft: "50px" }}>
+                    <h2>{selectedProject.title}</h2>
+                    <p>{selectedProject.description}</p>
+                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">Learn more</a>
+                </div>
+            )}
             {isModalOpen && (
                 <div className={styles.modal} onClick={closeModal}>
                     <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>

@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     max-width: 300px; /* Limite de tamanho lateral */
-    margin-left: 25px; /* Espaço entre a lista e o conteúdo */
     opacity: 0; /* Inicialmente invisível */
     transform: translateX(-100%); /* Começa fora da tela à esquerda */
     transition: opacity 1s ease, transform 1s ease;
@@ -35,23 +34,25 @@
 
 .btn1 {
     display: inline-block;
+    width: 250px; /* Define a largura específica */
+    height: 50px; /* Define a altura específica */
     padding: 15px 30px; /* Aumenta o tamanho do botão */
     margin: 10px;
     border-radius: 10px;
     color: white;
-    background-color: #007bff; /* Cor de fundo mais vibrante */
+    background: linear-gradient(165deg, #288e8e, #1e6a6a 10%, #185555 20%, #103939 30%, #0a2424 40%, #020707 90%); /* Gradiente de cores */
     text-align: center;
     text-decoration: none;
     font-size: 18px; /* Aumenta o tamanho da fonte */
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
     transform-style: preserve-3d;
     box-sizing: border-box;
     backdrop-filter: blur(5px); /* Efeito de desfoque */
 
     &:hover {
-        background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+        background-color: #ff6a60; /* Cor sólida ao passar o mouse */
         transform: scale(1.2);
     }
 }
@@ -103,4 +104,8 @@
 .selected {
     color: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.containerMid.blur {
+    filter: blur(5px); /* Aplica o efeito de desfoque */
 }

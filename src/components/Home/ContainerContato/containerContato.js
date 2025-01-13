@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./containerContato.module.scss";
 
 const contacts = [
-    { name: "WhatsApp", link: "https://wa.me/your-number", icon: "💬", description: "Entre em contato comigo pelo WathsApp" },
+    { name: "WhatsApp", link: "https://wa.me/5521965011250", icon: "💬", description: "Entre em contato comigo pelo WathsApp" },
     { name: "GitHub", link: "https://github.com/elmojuh", icon: "🐱", description: "Veja meus projetos pelo GitHub" },
     { name: "LinkedIn", link: "https://www.linkedin.com/in/elmo-junior", icon: "🔗", description: "Me encontre na plataforma Linkedin" },
     { name: "Email", icon: "📧", description: "Me envie email para o elmosanchesjr@gmail.com" },

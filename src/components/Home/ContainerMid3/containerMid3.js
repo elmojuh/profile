@@ -4,22 +4,25 @@ import styles from "./containerMid3.module.scss";
 const projectsData = [
     {
         "title": "IC - Learning Curve",
-        "description": "Descrição detalhada do projeto IC - Learning Curve. Descrição detalhada do projeto IC - Learning Curve. Descrição detalhada do projeto IC - Learning Curve. Descrição detalhada do projeto IC - Learning Curve. Descrição detalhada do projeto IC - Learning Curve. ",
-        "link": "https://example.com/ic-learning-curve"
+        "description": "Iniciação Científica em ANDAMENTO com pesquisa sobre a curva de aprendizado de desenvolvedores",
     },
     {
         "title": "TCC - Learning Curve",
-        "description": "Descrição detalhada do projeto TCC - Learning Curve.",
-        "link": "https://example.com/tcc-learning-curve"
+        "description": "Trabalho de Conclusão de Curso EM ANDAMENTO com pesquisa sobre a curva de aprendizado de desenvolvedores",
     },
     {
-        "title": "Cumess Brasil",
-        "description": "Descrição detalhada do projeto Cumess Brasil.",
+        "title": "Cumes Brasil",
+        "description": "Projeto realizado por mim e parceiros para a construção da plataforma Cumes Brasil",
+        "link": "https://www.cumesbrasil.com.br/"
+    },
+    {
+        "title": "Trabalhos Academicos",
+        "description": "Acesso aos mais diversos trabalhos academicos realizados por mim e parceiros",
         "link": "https://example.com/cumess-brasil"
     },
     {
-        "title": "ArtAcril",
-        "description": "Descrição detalhada do projeto ArtAcril.",
+        "title": "Publicações Científicas",
+        "description": "Acesso as mais diversas publicações acadêmicas realizados por mim e parceiros",
         "link": "https://example.com/artacril"
     }
 ];
@@ -77,11 +80,13 @@ export default function ContainerMid3() {
 
     return (
         <div className={styles.containerMid}>
+            <h1 className={styles.title}>Meus Projetos</h1>
+            <div className={styles.divider}></div>
             <div ref={projectListRef} className={styles.projectList}>
                 {projectsData.map((project, index) => (
                     <div
                         key={index}
-                        className={`${styles.btn1} ${selectedProject === project ? styles.selected : ""}`} // Adiciona a classe `selected`
+                        className={`${styles.btn1} ${selectedProject === project ? styles.selected : ""}`}
                         onClick={() => handleProjectClick(project)}
                     >
                         {project.title}
@@ -89,10 +94,14 @@ export default function ContainerMid3() {
                 ))}
             </div>
             {selectedProject && windowWidth >= 768 && (
-                <div ref={projectDetailsRef} className={`${styles.projectDetails} ${isVisible ? styles.visible : ""}`} style={{ marginLeft: "50px" }}>
+                <div ref={projectDetailsRef} className={`${styles.projectDetails} ${isVisible ? styles.visible : ""}`}
+                     style={{marginLeft: "50px"}}>
                     <h2>{selectedProject.title}</h2>
                     <p>{selectedProject.description}</p>
-                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">Learn more</a>
+                    {selectedProject.link && (
+                        <a href={selectedProject.link} target="_blank" rel="noopener noreferrer"
+                           className={styles.btn2}>Learn more</a>
+                    )}
                 </div>
             )}
             {isModalOpen && (
@@ -100,7 +109,10 @@ export default function ContainerMid3() {
                     <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
                         <h2>{selectedProject.title}</h2>
                         <p>{selectedProject.description}</p>
-                        <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">Learn more</a>
+                        {selectedProject.link && (
+                            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer"
+                               className={styles.btn2}>Learn more</a>
+                        )}
                     </div>
                 </div>
             )}

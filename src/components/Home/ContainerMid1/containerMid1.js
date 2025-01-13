@@ -68,6 +68,7 @@ export default function ContainerMid1() {
     return (
         <div className={styles.containerMid}>
             <div className={styles.contentContainer}>
+                <h1 className={styles.title}>Coleção de Aptidões</h1>
                 <div className={styles.legend}>
                     {Object.entries(skillsData).map(([category, {color}]) => (
                         <div key={category} className={styles.legendItem}>

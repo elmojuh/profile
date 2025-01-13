@@ -9,7 +9,7 @@ export default function ContainerMid2() {
 
     const phrases = [
         { text: "DESENVOLVEDOR FULL STACK, utilizo TECNOLOGIAS e FERRAMENTAS ATUAIS, e no seus usos para melhorar o mundo.", emoji: "💻" },
-        { text: "DIVERTIDO, INTERESSADO e conhecido pelo HUMOR RADIANTE e PARCERIA.", emoji: "😄" },
+        { text: "INTERESSADO, ESFORÇADO e DEDICADO, com HUMOR RADIANTE e PARCERIA COLABORATIVA.", emoji: "😄" },
         { text: "ENTUSIASTA e ATIVISTA do TRABALHO FOCADO há um ano.", emoji: "🚀" }
     ];
 

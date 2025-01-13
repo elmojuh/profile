@@ -15,10 +15,10 @@
 
 .title {
     margin-bottom: 20px;
-    font-size: 24px;
     color: #fff; /* Certifique-se de que a cor do texto é visível no fundo */
     text-align: center;
-    width: 100%; /* Garante que o título ocupe toda a largura do contêiner */
+    font-size: 32px;
+    font-weight: bold; /* Adiciona negrito ao título */
 }
 
 .containerContato {
@@ -61,7 +61,7 @@
     height: 50px; /* Define a altura fixa */
     padding: 10px;
     margin: 5px 0;
-  background: linear-gradient(45deg, #ff7e5f, #ff6a60, #ff6f61, #ff8490, #ff9a8b, #ff8a8d, #ff758c, #ff8a8d); /* Gradiente de cores */
+    background: linear-gradient(45deg, #ff7e5f, #ff6a60, #ff6f61, #ff8490, #ff9a8b, #ff8a8d, #ff758c, #ff8a8d); /* Gradiente de cores */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-decoration: none;

@@ -14,6 +14,24 @@
     }
 }
 
+.title {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        padding-inline: 20px;
+    }
+}
+
+.divider {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    background-color: white;
+}
+
 .projectList {
     display: flex;
     flex-direction: column;
@@ -34,22 +52,52 @@
 
 .btn1 {
     display: inline-block;
-    width: 250px; /* Define a largura específica */
-    height: 50px; /* Define a altura específica */
-    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    width: auto; /* Ajusta a largura automaticamente ao conteúdo */
+    min-width: 240px;
+    height: auto; /* Ajusta a altura automaticamente ao conteúdo */
+    padding: 10px 20px; /* Ajusta o padding para melhor espaçamento */
     margin: 10px;
     border-radius: 10px;
     color: white;
     background: linear-gradient(165deg, #288e8e, #1e6a6a 10%, #185555 20%, #103939 30%, #0a2424 40%, #020707 90%); /* Gradiente de cores */
     text-align: center;
     text-decoration: none;
-    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
     font-weight: bold;
     transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
     transform-style: preserve-3d;
     box-sizing: border-box;
     backdrop-filter: blur(5px); /* Efeito de desfoque */
+    word-wrap: break-word; /* Quebra o texto longo */
+
+    &:hover {
+        background-color: #ff6a60; /* Cor sólida ao passar o mouse */
+        transform: scale(1.2);
+    }
+}
+
+
+.btn2 {
+    display: inline-block;
+    width: auto; /* Ajusta a largura automaticamente ao conteúdo */
+    min-width: 100px;
+    height: auto; /* Ajusta a altura automaticamente ao conteúdo */
+    padding: 10px 20px; /* Ajusta o padding para melhor espaçamento */
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(45deg, #ff7e5f, #ff6a60, #ff6f61, #ff8490, #ff9a8b, #ff8a8d, #ff758c, #ff8a8d); /* Gradiente de cores */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px); /* Efeito de desfoque */
+    word-wrap: break-word; /* Quebra o texto longo */
 
     &:hover {
         background-color: #ff6a60; /* Cor sólida ao passar o mouse */
@@ -76,6 +124,9 @@
 
     @media (min-width: 768px) {
         align-items: flex-start;
+    }
+    p{
+        padding-top: 10px;
     }
 }
 

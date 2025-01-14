@@ -6,6 +6,7 @@ import { GiProcessor } from 'react-icons/gi';
 import { MdArchitecture } from 'react-icons/md';
 import { GrMultiple } from 'react-icons/gr';
 import { TbApi } from 'react-icons/tb';
+import { RiPhoneFill } from 'react-icons/ri';
 
 const icons = {
     facebook: FaFacebook,
@@ -14,6 +15,7 @@ const icons = {
     linkedin: FaLinkedin,
     whatsapp: FaWhatsapp,
     email: FaEnvelope,
+    phone: RiPhoneFill,
     vue: FaVuejs,
     react: FaReact,
     sass: FaSass,

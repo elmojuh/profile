@@ -70,12 +70,22 @@ export default function ContainerMid3() {
     const handleProjectClick = (project) => {
         setSelectedProject(project);
         if (windowWidth < 768) {
-            setIsModalOpen(true);
+            openModal();
         }
     };
 
+    const openModal = () => {
+        setIsModalOpen(true);
+        setTimeout(() => {
+            document.querySelector(`.${styles.modal}`).classList.add(styles.visible);
+        }, 10); // Pequeno atraso para garantir que a classe seja adicionada após a renderização
+    };
+
     const closeModal = () => {
-        setIsModalOpen(false);
+        document.querySelector(`.${styles.modal}`).classList.remove(styles.visible);
+        setTimeout(() => {
+            setIsModalOpen(false);
+        }, 500); // Tempo da animação de fechamento
     };
 
     return (

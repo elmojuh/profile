@@ -5,9 +5,11 @@ import ContainerMid3 from "../../src/components/Home/ContainerMid3/containerMid3
 import ContainerMid2 from "../../src/components/Home/ContainerMid2/containerMid2";
 import ContainerContato from "../../src/components/Home/ContainerContato/containerContato";
 import styles from "./home.module.scss";
+import icon from "../../src/components/Icons/index";
 
 export default function Home() {
     const [isContactVisible, setIsContactVisible] = useState(false);
+    const IconComponent = icon.phone;
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -47,7 +49,7 @@ export default function Home() {
             </div>
             {!isContactVisible && (
                 <button className={styles.contactButton} onClick={scrollToContact}>
-                    <span className={styles.icon}>💬</span>
+                    <IconComponent className={styles.icon}/>
                     <span className={styles.text}>Contato</span>
                 </button>
             )}

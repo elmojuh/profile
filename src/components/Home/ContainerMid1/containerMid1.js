@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import styles from "./containerMid1.module.scss";
 import skillsData from "./skills.json";
+import icons from "../../../components/Icons/index";
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -79,6 +80,7 @@ export default function ContainerMid1() {
                 </div>
                 <div className={styles.buttonsContainer}>
                     {skills.map((skill) => {
+                        const IconComponent = icons[skill.icon];
                         const rgbaColor = hexToRgba(skill.color, hoveredSkill === skill.name ? 1 : 0.3); // 100% opacity on hover
                         return (
                             <div key={skill.name} className={styles.skillButton}
@@ -86,6 +88,7 @@ export default function ContainerMid1() {
                                  onClick={() => openModal(skill)}
                                  onMouseEnter={() => setHoveredSkill(skill.name)}
                                  onMouseLeave={() => setHoveredSkill(null)}>
+                                {IconComponent && <IconComponent size={24} />}
                                 {skill.name}
                             </div>
                         );

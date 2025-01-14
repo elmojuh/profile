@@ -80,42 +80,45 @@ export default function ContainerMid3() {
 
     return (
         <div className={styles.containerMid}>
-            <h1 className={styles.title}>Meus Projetos</h1>
-            <div className={styles.divider}></div>
-            <div ref={projectListRef} className={styles.projectList}>
-                {projectsData.map((project, index) => (
-                    <div
-                        key={index}
-                        className={`${styles.btn1} ${selectedProject === project ? styles.selected : ""}`}
-                        onClick={() => handleProjectClick(project)}
-                    >
-                        {project.title}
+            <div className={styles.boxContent}>
+                <h1 className={styles.title}>Meus Projetos</h1>
+                <div className={styles.divider}></div>
+                <div ref={projectListRef} className={styles.projectList}>
+                    {projectsData.map((project, index) => (
+                        <div
+                            key={index}
+                            className={`${styles.btn1} ${selectedProject === project ? styles.selected : ""}`}
+                            onClick={() => handleProjectClick(project)}
+                        >
+                            {project.title}
+                        </div>
+                    ))}
+                </div>
+                {selectedProject && windowWidth >= 888 && (
+                    <div className={styles.boxDetails}>
+                        <div ref={projectDetailsRef} className={`${styles.projectDetails} ${isVisible ? styles.visible : ""}`}>
+                            <h2>{selectedProject.title}</h2>
+                            <p>{selectedProject.description}</p>
+                            {selectedProject.link && (
+                                <a href={selectedProject.link} target="_blank" rel="noopener noreferrer"
+                                   className={styles.btn2}>Saiba mais</a>
+                            )}
+                        </div>
                     </div>
-                ))}
+                )}
+                {isModalOpen && (
+                    <div className={styles.modal} onClick={closeModal}>
+                        <div className={styles.modalDetails} onClick={(e) => e.stopPropagation()}>
+                            <h2>{selectedProject.title}</h2>
+                            <p>{selectedProject.description}</p>
+                            {selectedProject.link && (
+                                <a href={selectedProject.link} target="_blank" rel="noopener noreferrer"
+                                   className={styles.btn2}>Saiba mais</a>
+                            )}
+                        </div>
+                    </div>
+                )}
             </div>
-            {selectedProject && windowWidth >= 768 && (
-                <div ref={projectDetailsRef} className={`${styles.projectDetails} ${isVisible ? styles.visible : ""}`}
-                     style={{marginLeft: "50px"}}>
-                    <h2>{selectedProject.title}</h2>
-                    <p>{selectedProject.description}</p>
-                    {selectedProject.link && (
-                        <a href={selectedProject.link} target="_blank" rel="noopener noreferrer"
-                           className={styles.btn2}>Learn more</a>
-                    )}
-                </div>
-            )}
-            {isModalOpen && (
-                <div className={styles.modal} onClick={closeModal}>
-                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-                        <h2>{selectedProject.title}</h2>
-                        <p>{selectedProject.description}</p>
-                        {selectedProject.link && (
-                            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer"
-                               className={styles.btn2}>Learn more</a>
-                        )}
-                    </div>
-                </div>
-            )}
         </div>
     );
 }

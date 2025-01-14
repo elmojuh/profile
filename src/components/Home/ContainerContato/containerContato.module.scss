@@ -6,8 +6,7 @@
     box-sizing: border-box;
     overflow: hidden;
     padding: 20px;
-    background: conic-gradient(from 0deg, #3c301d, #061617 20%, #061617 20%, #05191b, #05191b, #020707, #020707, #3c301d 95%);
-
+    background: conic-gradient(from 0deg, #05191b, #061617, #061617, #ff6a60, #ff6a60, #020707, #061616, #05191b);
     @media (min-width: 1024px) {
         padding: 20px 120px; /* Adiciona padding lateral em telas grandes */
     }
@@ -74,15 +73,15 @@
     }
 
     &:hover {
-        background-color: #e0e0e0;
-        transform: scale(1.05);
-      color: #000;
+        transform: scale(1.1);
+        color: #000;
     }
 }
 
 .icon {
     font-size: 24px;
     margin-right: 10px;
+    color: #000;
 }
 
 .name {
@@ -103,7 +102,7 @@
   background: linear-gradient(135deg, #ff8490 5%, #ff7e5f 10%, #103939 40%, #185555 50%, #103939 60%, #ff7e5f 90%, #ff8490 95%);
   width: 100%;
   max-width: 700px;
-  height: 200px;
+  height: 230px;
   opacity: 0;
   transform: rotateY(90deg); /* Inicialmente virado */
   transition: opacity 1s ease, transform 800ms ease;
@@ -132,7 +131,7 @@
   }
 
   .icon {
-    font-size: 40px;
+    font-size: 60px;
     margin-bottom: 10px;
     color: #fff;
   }
@@ -158,27 +157,7 @@
   }
 }
 
-.linkButton {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    background: linear-gradient(45deg, #ff7e5f, #ff6a60, #ff6f61, #ff8490, #ff9a8b, #ff8a8d, #ff758c, #ff8a8d);
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-    cursor: pointer;
-
-    &:hover {
-        background-color: #ff6a60; /* Cor sólida ao passar o mouse */
-        transform: scale(1.05);
-    }
-}
-
 .selected {
     color: white;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }

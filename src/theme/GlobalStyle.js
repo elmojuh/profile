@@ -12,7 +12,7 @@ export default function GlobalStyle() {
           color: black;
         }
         body {
-          font-family: sans-serif;
+            font-family: 'Fira Code', monospace;
         }
         img, video {
           max-width: 100%;

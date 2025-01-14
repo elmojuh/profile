@@ -5,57 +5,68 @@
       {
         "name": "Node",
         "description": "Utilizo **Node.js** para construir aplicações escaláveis e de alta performance, aproveitando o motor **V8** do Chrome.",
-        "link": "https://nodejs.org/"
+        "link": "https://nodejs.org/",
+        "icon": "node"
       },
       {
         "name": "API",
         "description": "Desenvolvo **APIs** robustas para facilitar a comunicação entre diferentes sistemas e aplicações. Isso permitirá que você integre seus sistemas com segurança e eficiência.",
-        "link": "https://en.wikipedia.org/wiki/API"
+        "link": "https://en.wikipedia.org/wiki/API",
+        "icon": "api"
       },
       {
         "name": "Java",
         "description": "Uso **Java** para criar aplicações seguras e eficientes, aproveitando sua orientação a objetos e robustez. Com **Spring Boot**, é possível desenvolver aplicações web e **APIs REST** de forma rápida e eficiente.",
-        "link": "https://www.java.com/"
+        "link": "https://www.java.com/",
+        "icon": "java"
       },
       {
         "name": "TypeScript",
         "description": "Utilizo **TypeScript** para escrever código **JavaScript** mais seguro e escalável, com tipagem estática.",
-        "link": "https://www.typescriptlang.org/"
+        "link": "https://www.typescriptlang.org/",
+        "icon": "typescript"
       },
       {
         "name": "Linux",
         "description": "Administro sistemas **Linux** para garantir um ambiente de desenvolvimento estável e seguro. **AWS**, **Azure** e **Google Cloud**.",
-        "link": "https://www.linux.org/"
+        "link": "https://www.linux.org/",
+        "icon": "linux"
       },
       {
         "name": "Python",
         "description": "Uso **Python** para desenvolver soluções rápidas e eficientes, aproveitando sua simplicidade e versatilidade. Com **Django** e **Flask**, é possível criar aplicações web e **APIs REST** de forma ágil. Durante a universidade, co-autor de um artigo científico que utilizou **Python** para análise de dados com **LLM**.",
-        "link": "https://www.python.org/"
+        "link": "https://www.python.org/",
+        "icon": "python"
       },
       {
         "name": "SQL",
         "description": "Utilizo **SQL** para gerenciar e manipular dados de forma eficiente em bancos de dados relacionais. Com **MySQL**, **PostgreSQL** e **SQLite**, é possível armazenar e recuperar dados de forma segura e eficiente.",
-        "link": "https://en.wikipedia.org/wiki/SQL"
+        "link": "https://en.wikipedia.org/wiki/SQL",
+        "icon": "sql"
       },
       {
         "name": "NoSQL",
         "description": "Uso bancos de dados **NoSQL** para armazenar e recuperar dados de forma flexível e escalável. Com **MongoDB**, **Firebase** e **Cassandra**, é possível lidar com grandes volumes de dados de forma eficiente.",
-        "link": "https://en.wikipedia.org/wiki/NoSQL"
+        "link": "https://en.wikipedia.org/wiki/NoSQL",
+        "icon": "nosql"
       },
       {
         "name": "Docker",
         "description": "Utilizo **Docker** para criar ambientes de desenvolvimento consistentes e portáteis, facilitando a implantação de aplicações. É possível criar contêineres isolados que executam aplicações de forma eficiente e segura, garantindo a consistência entre diferentes ambientes.",
-        "link": "https://www.docker.com/"
+        "link": "https://www.docker.com/",
+        "icon": "docker"
       },
       {
         "name": "CI/CD",
         "description": "Implemento pipelines de **CI/CD** para automatizar a entrega contínua de software, garantindo qualidade e rapidez. Com **Jenkins**, **GitLab CI/CD** ou **GitHub Actions**, é possível automatizar a compilação, teste e implantação de aplicações de forma eficiente. Usar **SonarQube/SonarCloud** para garantir a qualidade do código.",
-        "link": "https://en.wikipedia.org/wiki/CI/CD"
+        "link": "https://en.wikipedia.org/wiki/CI/CD",
+        "icon": "cicd"
       },
       {
         "name": "Git",
         "description": "Utilizo **Git** para versionar código e colaborar de forma eficiente em projetos de desenvolvimento.",
-        "link": "https://git-scm.com/"
+        "link": "https://git-scm.com/",
+        "icon": "git"
       }
     ]
   },
@@ -65,37 +76,44 @@
       {
         "name": "React",
         "description": "Utilizo **React** para construir interfaces de usuário dinâmicas e responsivas, melhorando a experiência do usuário.",
-        "link": "https://reactjs.org/"
+        "link": "https://reactjs.org/",
+        "icon": "react"
       },
       {
         "name": "Vue",
         "description": "Uso **Vue.js** para desenvolver aplicações front-end interativas e de fácil manutenção.",
-        "link": "https://vuejs.org/"
+        "link": "https://vuejs.org/",
+        "icon": "vue"
       },
       {
         "name": "Angular",
         "description": "Utilizo **Angular** para criar aplicações web dinâmicas e de alta performance, aproveitando seu poderoso sistema de componentes.",
-        "link": "https://angular.io/"
+        "link": "https://angular.io/",
+        "icon": "angular"
       },
       {
         "name": "HTML5",
         "description": "Utilizo **HTML5** para criar páginas web semânticas e acessíveis, melhorando a experiência do usuário.",
-        "link": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+        "icon": "html5"
       },
       {
         "name": "CSS3",
         "description": "Utilizo **CSS3** para estilizar páginas web de forma eficiente e responsiva, melhorando a experiência do usuário.",
-        "link": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3"
+        "link": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3",
+        "icon": "css3"
       },
       {
         "name": "JavaScript",
         "description": "Utilizo **JavaScript** para criar interações dinâmicas e responsivas em páginas web, melhorando a experiência do usuário.",
-        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "icon": "javascript"
       },
       {
         "name": "SASS",
         "description": "Utilizo **SASS** para escrever estilos CSS de forma mais eficiente e organizado, aproveitando variáveis, mixins e funções.",
-        "link": "https://sass-lang.com/"
+        "link": "https://sass-lang.com/",
+        "icon": "sass"
       }
     ]
   },
@@ -105,17 +123,20 @@
       {
         "name": "Scrum",
         "description": "Aplico **Scrum** para gerenciar projetos de forma ágil, garantindo entregas rápidas e de qualidade.",
-        "link": "https://www.scrum.org/"
+        "link": "https://www.scrum.org/",
+        "icon": "scrum"
       },
       {
         "name": "TDD",
         "description": "Utilizo **TDD** para desenvolver software com alta cobertura de testes, garantindo a qualidade do código.",
-        "link": "https://en.wikipedia.org/wiki/Test-driven_development"
+        "link": "https://en.wikipedia.org/wiki/Test-driven_development",
+        "icon": "tdd"
       },
       {
         "name": "Kanban",
         "description": "Aplico **Kanban** para melhorar o fluxo de trabalho e aumentar a eficiência da equipe.",
-        "link": "https://en.wikipedia.org/wiki/Kanban"
+        "link": "https://en.wikipedia.org/wiki/Kanban",
+        "icon": "kanban"
       }
     ]
   },
@@ -125,22 +146,26 @@
       {
         "name": "BPMN",
         "description": "Utilizo **BPMN** para modelar processos de negócios, facilitando a análise e a melhoria contínua.",
-        "link": "https://www.omg.org/spec/BPMN/"
+        "link": "https://www.omg.org/spec/BPMN/",
+        "icon": "bpmn"
       },
       {
-        "name": "UML Astah",
-        "description": "Uso **UML Astah** para criar diagramas que ajudam a visualizar e planejar sistemas complexos.",
-        "link": "https://astah.net/"
+        "name": "UML",
+        "description": "Uso **UML** para criar diagramas que ajudam a visualizar e planejar sistemas complexos.",
+        "link": "https://www.uml.org",
+        "icon": "uml"
       },
       {
         "name": "Arquitetura Limpa",
         "description": "Aplico **Arquitetura Limpa** para criar sistemas modulares e de fácil manutenção, separando responsabilidades e facilitando testes.",
-        "link": "https://en.wikipedia.org/wiki/Clean_architecture"
+        "link": "https://en.wikipedia.org/wiki/Clean_architecture",
+        "icon": "clean_architecture"
       },
       {
         "name": "Arquitetura em Camada",
         "description": "Utilizo **Arquitetura em Camada** para organizar o código em diferentes níveis de abstração, facilitando a manutenção e a escalabilidade.",
-        "link": "https://en.wikipedia.org/wiki/Multitier_architecture"
+        "link": "https://en.wikipedia.org/wiki/Multitier_architecture",
+        "icon": "layered_architecture"
       }
     ]
   }

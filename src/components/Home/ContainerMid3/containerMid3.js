@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./containerMid3.module.scss";
+import icons from "../../../components/Icons/index";
 
 const projectsData = [
     {
@@ -13,11 +14,12 @@ const projectsData = [
     {
         "title": "Cumes Brasil",
         "description": "Projeto realizado por mim e parceiros para a construção da plataforma Cumes Brasil",
-        "link": "https://www.cumesbrasil.com.br/"
+        "link": "https://www.cumesbrasil.com.br/",
+        "github": "https://github.com/elmojuh/cumes-brasil"
     },
     {
         "title": "Trabalhos Academicos",
-        "description": "Acesso aos mais diversos trabalhos academicos realizados por mim e parceiros",
+        "description": "Acesso aos mais diversos trabalhos acadêmicos realizados por mim e parceiros",
         "link": "https://example.com/cumess-brasil"
     },
     {
@@ -34,6 +36,7 @@ export default function ContainerMid3() {
     const [isVisible, setIsVisible] = useState(false);
     const projectListRef = useRef(null);
     const projectDetailsRef = useRef(null);
+    const IconComponent = icons["github"];
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -109,10 +112,18 @@ export default function ContainerMid3() {
                         <div ref={projectDetailsRef} className={`${styles.projectDetails} ${isVisible ? styles.visible : ""}`}>
                             <h2>{selectedProject.title}</h2>
                             <p>{selectedProject.description}</p>
-                            {selectedProject.link && (
-                                <a href={selectedProject.link} target="_blank" rel="noopener noreferrer"
-                                   className={styles.btn2}>Saiba mais</a>
-                            )}
+                            <div className={styles.projectLinks}>
+                                {selectedProject.link && (
+                                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer"
+                                       className={styles.btn2}>Saiba mais</a>
+                                )}
+                                {selectedProject.github && (
+                                    <a href={selectedProject.github} target="_blank" rel="noopener noreferrer"
+                                       className={styles.githubButton}>
+                                        {IconComponent && <IconComponent size={30} />}
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     </div>
                 )}
@@ -121,10 +132,18 @@ export default function ContainerMid3() {
                         <div className={styles.modalDetails} onClick={(e) => e.stopPropagation()}>
                             <h2>{selectedProject.title}</h2>
                             <p>{selectedProject.description}</p>
-                            {selectedProject.link && (
-                                <a href={selectedProject.link} target="_blank" rel="noopener noreferrer"
-                                   className={styles.btn2}>Saiba mais</a>
-                            )}
+                            <div className={styles.projectLinks}>
+                                {selectedProject.link && (
+                                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer"
+                                       className={styles.btn2}>Saiba mais</a>
+                                )}
+                                {selectedProject.github && (
+                                    <a href={selectedProject.github} target="_blank" rel="noopener noreferrer"
+                                       className={styles.githubButton}>
+                                        {IconComponent && <IconComponent size={30} />}
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     </div>
                 )}

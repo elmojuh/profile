@@ -116,7 +116,6 @@
     word-wrap: break-word;
 
     &:hover {
-        background-color: #ff6a60;
         transform: scale(1.2);
     }
 }
@@ -125,6 +124,58 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.githubButton {
+    display: inline-block;
+    width: auto;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 10px;
+    color: #1c1c1c;
+    background: linear-gradient(45deg, #ff7e5f, #ff6a60, #ff6f61, #ff8490, #ff9a8b, #ff8a8d, #ff758c, #ff8a8d);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &:hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        animation: rotateBorder 2s linear infinite;
+    }
+}
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.projectLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .projectDetails {

@@ -23,7 +23,7 @@
 }
 
 .contentContainer {
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     display: flex;
     padding-block: 15px;
@@ -58,10 +58,17 @@
     padding: 5px 10px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 
     &:hover {
         transform: scale(1.1);
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6;
+    }
+
+    &.selected {
+        transform: scale(1.1);
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6;
     }
 }
 

@@ -79,11 +79,9 @@ $transition-ease: ease;
             transform: translateX(0); // Animação para a posição final
         }
 
-        .cursor {
+        .cursor::after {
+            content: '|';
             display: inline-block;
-            width: 2px;
-            background-color: white;
-            margin-left: 2px;
             animation: blink 1s step-start infinite;
         }
 

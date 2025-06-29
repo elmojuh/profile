@@ -7,8 +7,7 @@ const contacts = [
     { name: "WhatsApp", link: "https://wa.me/5521965011282", icon: "whatsapp", description: "Entre em contato comigo pelo **WhatsApp**" },
     { name: "GitHub", link: "https://github.com/elmojuh", icon: "github", description: "Veja meus projetos pelo **GitHub**" },
     { name: "LinkedIn", link: "https://www.linkedin.com/in/elmo-junior", icon: "linkedin", description: "Me encontre na plataforma **LinkedIn**" },
-    { name: "Email", icon: "email", description: "Me envie email para o **elmosanchesjr@gmail.com**" },
-    { name: "Instagram", link: "https://www.instagram.com/elmojuh", icon: "instagram", description: "Me encontre no **Instagram**" }
+    { name: "Email", icon: "email", description: "Me envie email para o **elmosanchesjr@gmail.com**" }
 ];
 
 export default function ContainerContato() {

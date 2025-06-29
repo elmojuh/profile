@@ -18,14 +18,9 @@ const projectsData = [
         "github": "https://github.com/elmojuh/cumes-brasil"
     },
     {
-        "title": "Trabalhos Academicos",
-        "description": "Acesso aos mais diversos trabalhos acadêmicos realizados por mim e parceiros",
-        "link": "https://example.com/cumess-brasil"
-    },
-    {
         "title": "Publicações Científicas",
         "description": "Acesso as mais diversas publicações acadêmicas realizados por mim e parceiros",
-        "link": "https://example.com/artacril"
+        "link": "https://sol.sbc.org.br/index.php/wei/article/view/29659"
     }
 ];
 

@@ -7,7 +7,6 @@ export default function MyApp({ Component, pageProps }) {
     <>
         <Head>
             <title>@ElmoJuh</title>
-            <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet"/>
         </Head>
         <GlobalStyle/>
         <Component {...pageProps} />

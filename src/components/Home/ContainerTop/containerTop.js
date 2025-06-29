@@ -44,8 +44,7 @@ export default function ContainerTop() {
                     <img src="/images/minha_foto_2.jpg" alt="Minha imagem" className={styles.imgProfile}/>
                 </div>
                 <div ref={textRef} className={`${styles.boxText}`} data-direction="right">
-                    <span ref={typingTextRef}></span>
-                    <span className={styles.cursor}>|</span>
+                    <span ref={typingTextRef} className={styles.cursor}></span>
                 </div>
             </div>
         </div>

@@ -16,12 +16,13 @@ export default function ContainerMid1() {
     const [skills, setSkills] = useState([]);
     const [modalContent, setModalContent] = useState(null);
     const [hoveredSkill, setHoveredSkill] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState(null);
 
     useEffect(() => {
         const shuffledSkills = [];
-        Object.entries(skillsData).forEach(([category, { color, skills }]) => {
-            skills.forEach(skill => {
-                shuffledSkills.push({ ...skill, color });
+        skillsData.forEach(category => {
+            category.skills.forEach(skill => {
+                shuffledSkills.push({ ...skill, color: category.color, category: category.category });
             });
         });
         setSkills(shuffleArray(shuffledSkills));
@@ -71,23 +72,39 @@ export default function ContainerMid1() {
             <div className={styles.contentContainer}>
                 <h1 className={styles.title}>Coleção de Aptidões</h1>
                 <div className={styles.legend}>
-                    {Object.entries(skillsData).map(([category, {color}]) => (
-                        <div key={category} className={styles.legendItem}>
-                            <span className={styles.legendColor} style={{backgroundColor: color}}></span>
-                            {category}
+                    {skillsData.map(category => (
+                        <div
+                            key={category.category}
+                            className={`${styles.legendItem} ${selectedCategory === category.category ? styles.selected : ''}`}
+                            onClick={() => setSelectedCategory(prev => prev === category.category ? null : category.category)}
+                        >
+                            <span className={styles.legendColor} style={{ backgroundColor: category.color }}></span>
+                            {category.category}
                         </div>
                     ))}
                 </div>
                 <div className={styles.buttonsContainer}>
                     {skills.map((skill) => {
                         const IconComponent = icons[skill.icon];
-                        const rgbaColor = hexToRgba(skill.color, hoveredSkill === skill.name ? 1 : 0.3); // 100% opacity on hover
+                        const isSelected = selectedCategory === skill.category;
+                        const isHovered = hoveredSkill === skill.name;
+                        const isHighlighted = (selectedCategory === null && isHovered) || (selectedCategory !== null && (isSelected || isHovered));
+                        const opacity = isHighlighted ? 1 : (selectedCategory !== null && !isSelected ? 0.2 : 0.5);
+                        const rgbaColor = hexToRgba(skill.color, opacity);
+
                         return (
-                            <div key={skill.name} className={styles.skillButton}
-                                 style={{backgroundColor: rgbaColor, backdropFilter: 'blur(5px)'}}
-                                 onClick={() => openModal(skill)}
-                                 onMouseEnter={() => setHoveredSkill(skill.name)}
-                                 onMouseLeave={() => setHoveredSkill(null)}>
+                            <div
+                                key={skill.name}
+                                className={styles.skillButton}
+                                style={{
+                                    backgroundColor: rgbaColor,
+                                    transition: 'background-color 0.3s ease, opacity 0.3s ease',
+                                    opacity: (selectedCategory !== null && !isSelected && !isHovered) ? 0.6 : 1,
+                                }}
+                                onClick={() => openModal(skill)}
+                                onMouseEnter={() => setHoveredSkill(skill.name)}
+                                onMouseLeave={() => setHoveredSkill(null)}
+                            >
                                 {IconComponent && <IconComponent size={24} />}
                                 {skill.name}
                             </div>

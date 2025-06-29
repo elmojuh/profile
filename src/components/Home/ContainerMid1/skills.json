@@ -1,5 +1,6 @@
-{
-  "BACKEND": {
+[
+  {
+    "category": "BACKEND",
     "color": "#ff9999",
     "skills": [
       {
@@ -67,10 +68,23 @@
         "description": "Utilizo **Git** para versionar código e colaborar de forma eficiente em projetos de desenvolvimento.",
         "link": "https://git-scm.com/",
         "icon": "git"
+      },
+      {
+        "name": "Sequelize",
+        "description": "Uso **Sequelize** como um ORM (Object-Relational Mapper) para **Node.js**, facilitando a interação com bancos de dados SQL de forma programática e segura.",
+        "link": "https://sequelize.org/",
+        "icon": "sequelize"
+      },
+      {
+        "name": "Jest",
+        "description": "Utilizo **Jest** para criar e executar testes unitários e de integração em aplicações **JavaScript**, garantindo a qualidade e a estabilidade do código.",
+        "link": "https://jestjs.io/",
+        "icon": "jest"
       }
     ]
   },
-  "FRONTEND": {
+  {
+    "category": "FRONTEND",
     "color": "#99ccff",
     "skills": [
       {
@@ -114,10 +128,17 @@
         "description": "Utilizo **SASS** para escrever estilos CSS de forma mais eficiente e organizado, aproveitando variáveis, mixins e funções.",
         "link": "https://sass-lang.com/",
         "icon": "sass"
+      },
+      {
+        "name": "Next.js",
+        "description": "Desenvolvo aplicações **React** otimizadas para produção com **Next.js**, aproveitando recursos como renderização no lado do servidor (SSR) e geração de sites estáticos (SSG) para melhor performance e SEO.",
+        "link": "https://nextjs.org/",
+        "icon": "nextjs"
       }
     ]
   },
-  "METODOLOGIAS ÁGEIS": {
+  {
+    "category": "METODOLOGIAS ÁGEIS",
     "color": "#99ff99",
     "skills": [
       {
@@ -140,7 +161,8 @@
       }
     ]
   },
-  "MODELAGEM": {
+  {
+    "category": "MODELAGEM",
     "color": "#ffcc99",
     "skills": [
       {
@@ -154,7 +176,13 @@
         "description": "Uso **UML** para criar diagramas que ajudam a visualizar e planejar sistemas complexos.",
         "link": "https://www.uml.org",
         "icon": "uml"
-      },
+      }
+    ]
+  },
+  {
+    "category": "ARQUITETURA",
+    "color": "#a0346e",
+    "skills": [
       {
         "name": "Arquitetura Limpa",
         "description": "Aplico **Arquitetura Limpa** para criar sistemas modulares e de fácil manutenção, separando responsabilidades e facilitando testes.",
@@ -166,7 +194,13 @@
         "description": "Utilizo **Arquitetura em Camada** para organizar o código em diferentes níveis de abstração, facilitando a manutenção e a escalabilidade.",
         "link": "https://en.wikipedia.org/wiki/Multitier_architecture",
         "icon": "layered_architecture"
+      },
+      {
+        "name": "DDD",
+        "description": "Aplico os princípios do **Domain-Driven Design (DDD)** para modelar o software em torno do domínio do negócio, criando sistemas mais alinhados com as necessidades do cliente.",
+        "link": "https://en.wikipedia.org/wiki/Domain-driven_design",
+        "icon": "ddd"
       }
     ]
   }
-}
+]

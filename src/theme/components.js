@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import * as iconSet from "@fortawesome/free-solid-svg-icons";
 
 // Aqui acrupo grande parte dos comonentes usáveis construidos ou vindos de outras bibliotecas
 
@@ -148,30 +146,6 @@ export function Box({
 Box.defaultProps = {
   styleSheet: {},
 };
-
-export function Icon({ as, styleSheet, ...props }) {
-  const {
-    iconVariant,
-    ...restStyleSheet
-  } = styleSheet;
-  const styleSheetUpdated = restStyleSheet;
-
-  console.log('iconVariant', iconVariant);
-
-  return (
-    <Box
-      as={FontAwesomeIcon}
-      icon={iconSet[`fa${capitalize(iconVariant)}`]}
-      crossOrigin="anonymous"
-      styleSheet={{
-        width: '1.5ch',
-        height: '1.5ch',
-        ...styleSheetUpdated
-      }}
-      {...props}
-    />
-  )
-}
 
 export function Text({ as, styleSheet, ...props }) {
   const {

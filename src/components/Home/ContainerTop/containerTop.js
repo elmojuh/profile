@@ -22,19 +22,25 @@ export default function ContainerTop() {
         // Lógica para animação de digitação
         const text = "Vamos construir seu sistema juntos?";
         let index = 0;
+        let typingTimer;
+        let initialTimer;
 
         const typeText = () => {
-            if (index < text.length) {
+            if (index < text.length && typingTextRef.current) {
                 typingTextRef.current.textContent += text[index];
                 index++;
-                setTimeout(typeText, 50);
+                typingTimer = setTimeout(typeText, 50);
             }
         };
 
         // Inicia a digitação quando a página carrega
-        setTimeout(typeText, 2000);
+        initialTimer = setTimeout(typeText, 2000);
 
-        return () => observer.disconnect();
+        return () => {
+            observer.disconnect();
+            clearTimeout(initialTimer);
+            clearTimeout(typingTimer);
+        };
     }, []);
 
     return (

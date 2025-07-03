@@ -4,6 +4,11 @@ import icons from "../../../components/Icons/index";
 
 const projectsData = [
     {
+        "title": "Publicações Científicas",
+        "description": "Acesso as mais diversas publicações acadêmicas realizados por mim e parceiros",
+        "link": "https://sol.sbc.org.br/index.php/wei/article/view/29659"
+    },
+    {
         "title": "IC - Learning Curve",
         "description": "Iniciação Científica em ANDAMENTO com pesquisa sobre a curva de aprendizado de desenvolvedores",
     },
@@ -16,12 +21,7 @@ const projectsData = [
         "description": "Projeto realizado por mim e parceiros para a construção da plataforma Cumes Brasil",
         "link": "https://www.cumesbrasil.com.br/",
         "github": "https://github.com/elmojuh/cumes-brasil"
-    },
-    {
-        "title": "Publicações Científicas",
-        "description": "Acesso as mais diversas publicações acadêmicas realizados por mim e parceiros",
-        "link": "https://sol.sbc.org.br/index.php/wei/article/view/29659"
-    }
+    }    
 ];
 
 export default function ContainerMid3() {

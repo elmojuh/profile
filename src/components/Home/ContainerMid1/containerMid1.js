@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import styles from "./containerMid1.module.scss";
-import skillsData from "./skills.json";
+import skillsData from "../../../data/skills.json";
 import icons from "../../../components/Icons/index";
 
 function shuffleArray(array) {
@@ -15,8 +15,10 @@ function shuffleArray(array) {
 export default function ContainerMid1() {
     const [skills, setSkills] = useState([]);
     const [modalContent, setModalContent] = useState(null);
+    const [isModalVisible, setIsModalVisible] = useState(false);
     const [hoveredSkill, setHoveredSkill] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const contentRef = useRef(null);
 
     useEffect(() => {
         const shuffledSkills = [];
@@ -32,32 +34,54 @@ export default function ContainerMid1() {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add(styles.visible);
+                        observer.unobserve(entry.target);
                     }
                 });
             },
-            { threshold: 0.2 } // Ativa quando 30% do elemento estiver visível
+            { threshold: 0.2 }
         );
 
-        const contentContainer = document.querySelector(`.${styles.contentContainer}`);
-        if (contentContainer) {
-            observer.observe(contentContainer);
+        const currentContentRef = contentRef.current;
+        if (currentContentRef) {
+            observer.observe(currentContentRef);
         }
 
-        return () => observer.disconnect();
+        return () => {
+            if (currentContentRef) {
+                observer.unobserve(currentContentRef);
+            }
+        };
     }, []);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (selectedCategory) {
+                if (contentRef.current && (!contentRef.current.contains(event.target) || event.target === contentRef.current)) {
+                    setSelectedCategory(null);
+                }
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [selectedCategory]);
 
     const openModal = (skill) => {
         setModalContent(skill);
-        setTimeout(() => {
-            document.querySelector(`.${styles.modal}`).classList.add(styles.visible);
-        }, 10); // Pequeno atraso para garantir que a classe seja adicionada após a renderização
+        // Usamos requestAnimationFrame para garantir que a classe 'visible' seja adicionada
+        // após o modal ser renderizado, permitindo a transição de CSS.
+        requestAnimationFrame(() => {
+            setIsModalVisible(true);
+        });
     };
 
     const closeModal = () => {
-        document.querySelector(`.${styles.modal}`).classList.remove(styles.visible);
+        setIsModalVisible(false);
         setTimeout(() => {
             setModalContent(null);
-        }, 500); // Tempo da animação de fechamento
+        }, 300);
     };
 
     const hexToRgba = (hex, alpha) => {
@@ -69,7 +93,7 @@ export default function ContainerMid1() {
 
     return (
         <div className={styles.containerMid}>
-            <div className={styles.contentContainer}>
+            <div className={styles.contentContainer} ref={contentRef}>
                 <h1 className={styles.title}>Coleção de Aptidões</h1>
                 <div className={styles.legend}>
                     {skillsData.map(category => (
@@ -98,7 +122,7 @@ export default function ContainerMid1() {
                                 className={styles.skillButton}
                                 style={{
                                     backgroundColor: rgbaColor,
-                                    transition: 'background-color 0.3s ease, opacity 0.3s ease',
+                                    transition: 'background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease',
                                     opacity: (selectedCategory !== null && !isSelected && !isHovered) ? 0.6 : 1,
                                 }}
                                 onClick={() => openModal(skill)}
@@ -113,11 +137,14 @@ export default function ContainerMid1() {
                 </div>
             </div>
             {modalContent && (
-                <div className={styles.modal} onClick={closeModal}>
+                <div 
+                    className={`${styles.modal} ${isModalVisible ? styles.visible : ''}`} 
+                    onClick={closeModal}
+                >
                     <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
                         <ReactMarkdown>{modalContent.description}</ReactMarkdown>
                         <a href={modalContent.link} target="_blank" rel="noopener noreferrer">
-                            <i className="icon-info"></i>
+                            Saber mais
                         </a>
                     </div>
                 </div>

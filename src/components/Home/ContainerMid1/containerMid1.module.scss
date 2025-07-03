@@ -101,13 +101,14 @@
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
     transform-style: preserve-3d;
     box-sizing: border-box;
 
     &:hover {
         transform: scale(1.2);
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6;
     }
 
     .icon {
@@ -125,19 +126,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Inicialmente invisível */
-    transform: scale(0.5); /* Inicialmente pequeno */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animação de crescimento */
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     z-index: 1000;
 }
 
 .modalContent {
-    background: rgba(255, 255, 255, 0.9); // Transparência
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px;
     border-radius: 10px;
     max-width: 500px;
     width: 90%;
     text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .modalContent h2 {
@@ -156,6 +160,7 @@
 }
 
 .modal.visible {
-    opacity: 1; /* Torna visível */
-    transform: scale(1); /* Tamanho final */
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
 }

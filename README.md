@@ -32,7 +32,6 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas:
 *   **React:** Oferece uma abordagem baseada em componentes, facilitando a criação de interfaces complexas e reutilização de código, além de uma vasta comunidade e ecossistema.
 *   **Next.js:** Simplifica o desenvolvimento de aplicações React com recursos como roteamento baseado em sistema de arquivos, otimizações de performance (SSR, SSG) e uma excelente experiência para desenvolvedores. Ideal para colocar sites no ar de forma rápida e eficiente.
 *   **JavaScript:** A linguagem fundamental que possibilita o desenvolvimento tanto no lado do cliente quanto no servidor. O uso de Promises e outras features modernas são exploradas no projeto.
-*   **Material UI (MUI):** Acelera o desenvolvimento da interface com componentes prontos e aderentes ao Material Design, proporcionando um estilo "flat" e responsivo. *(Remova se não estiver usando)*
 *   **Sass:** Permite escrever CSS de forma mais organizada e poderosa com o uso de variáveis, mixins e aninhamento.
 
 ## ✨ Funcionalidades
@@ -43,43 +42,6 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas:
 *   🔗 Links diretos para redes sociais e formas de contato.
 *   📱 Design responsivo para diferentes tamanhos de tela.
 
-## ⚙️ Como Rodar o Projeto Localmente
-
-Siga os passos abaixo para ter uma cópia do projeto rodando na sua máquina:
-
-1.  **Clone o repositório:**
-
-    ```bash
-    git clone https://github.com/elmojuh/profile.git
-    ```
-
-2.  **Navegue até o diretório do projeto:**
-
-    ```bash
-    cd profile
-    ```
-
-3.  **Instale as dependências:**
-
-    ```bash
-    npm install
-    # ou
-    yarn install
-    # ou
-    pnpm install
-    ```
-
-4.  **Inicie o servidor de desenvolvimento:**
-
-    ```bash
-    npm run dev
-    # ou
-    yarn dev
-    # ou
-    pnpm dev
-    ```
-
-O projeto estará disponível em `http://localhost:3000`.
 
 ## 📂 Estrutura do Projeto
 
@@ -116,7 +78,6 @@ As principais dependências do projeto estão listadas no `package.json`:
   // ... outras dependências como Material UI, Emotion, Styled Components se estiverem no seu package.json atual
 }
 ```
-*(Note: Mantive a lista simplificada com base no `package.json` que você compartilhou por último. Se as dependências de Material UI, Emotion, Styled Components estiverem no seu `package.json` atual, adicione-as aqui também.)*
 
 ## 🤝 Contribuição
 

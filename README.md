@@ -67,7 +67,6 @@ Uma breve visão geral da estrutura de pastas principal:
 As principais dependências do projeto estão listadas no `package.json`:
 
 ```json
-// filepath: c:\dev\profile\package.json
 "dependencies": {
   "next": "^15.1.2",
   "react": "^18.1.0",
@@ -75,7 +74,6 @@ As principais dependências do projeto estão listadas no `package.json`:
   "react-icons": "^5.4.0",
   "react-markdown": "^9.0.1",
   "sass": "^1.83.0"
-  // ... outras dependências como Material UI, Emotion, Styled Components se estiverem no seu package.json atual
 }
 ```
 
